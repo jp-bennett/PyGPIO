@@ -133,16 +133,16 @@ static PyMethodDef gpio_Methods[] = {
 };
 
 
-static struct PyModuleDef gpio =
+static struct PyModuleDef PyGPIO =
 {
     PyModuleDef_HEAD_INIT,
-    "gpio", /* name of module */
-    "usage: Combinations.uniqueCombinations(lstSortableItems, comboSize)\n", /* module documentation, may be NULL */
+    "PyGPIO", /* name of module */
+    "usage: See Readme.\n", /* module documentation, may be NULL */
     -1,   /* size of per-interpreter state of the module, or -1 if the module keeps state in global variables. */
     gpio_Methods
 };
 
-PyMODINIT_FUNC PyInit_gpio(void)
+PyMODINIT_FUNC PyInit_PyGPIO(void)
 {
-    return PyModule_Create(&gpio);
+    return PyModule_Create(&PyGPIO);
 }
